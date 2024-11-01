@@ -9,27 +9,6 @@ This document describes the next steps for the StableHLO project, categorizing
 the ongoing work reflected in the issue tracker and arranging this work into
 planned deliverables.
 
-## Milestones
-
-In 2023, we are planning two big milestones: 1) StableHLO v0.9 which will
-provide an initial version of the opset and initial compatibility
-guarantees, 2) StableHLO v1.0 which will implement high-priority improvements
-and start providing full compatibility guarantees.
-
-**StableHLO v0.9** will mirror MHLO/HLO, augmented with a specification for
-statically-shaped ops and initial compatibility guarantees. Per the
-[compatibility RFC](https://github.com/openxla/stablehlo/blob/main/rfcs/20220912-compatibility.md),
-this release will provide 1 month of forward and backward compatibility. These
-modest guarantees will enable gaining experience with dialect evolution and
-allow some time for cleanup before full guarantees go into effect. We are
-planning to release StableHLO v0.9 in Q1 2023.
-
-**StableHLO v1.0** will implement high-priority improvements, including
-cleaning up the frontend contract (with the goal that StableHLO programs only
-include ops from the StableHLO dialect, rather than today's mixture of dialects
-and unregistered attributes) and providing a reference implementation. We are
-planning to release StableHLO v1.0 in H2 2023.
-
 ## Workstreams
 
 In order to organize the development towards the aforementioned milestones,
