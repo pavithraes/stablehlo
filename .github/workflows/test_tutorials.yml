@@ -30,10 +30,10 @@ jobs:
           python -m venv env
           source env/bin/activate
           python -m pip install --upgrade pip
-          pip install -r ./docs/tutorials/requirements.txt
+          pip install -r docs/tutorials/requirements.txt
         shell: bash
 
       - name: Execute tutorial notebooks
         run: |
-          jupyter execute docs/tutorials/*.ipynb
+          python -m jupyter execute docs/tutorials/*.ipynb
         shell: bash

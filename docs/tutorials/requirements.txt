@@ -2,8 +2,8 @@ jax
 jaxlib
 flax
 transformers
-torch-xla==2.5.0
+# torch-xla==2.5.0
 torch==2.5.0
 torchvision==0.20.0
-tensorflow-cpu
+# tensorflow-cpu
 jupyter
