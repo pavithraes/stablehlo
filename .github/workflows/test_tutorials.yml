@@ -1,0 +1,32 @@
+name: Execute Tutorial Notebooks
+
+on:
+  push:
+    paths:
+      - 'docs/tutorials/**.ipynb'
+      - .github/workflows/tutorials.yml
+  pull_request:
+    branches:
+      - main
+      - test-tutorials
+  workflow_dispatch:
+
+jobs:
+  test-notebooks:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python and install dependencies
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+      - run: pip install -r docs/tutorials/requirements.txt
+
+      - name: Execute tutorial notebooks
+        run: |
+          jupyter execute docs/tutorials/pytorch-export.ipynb --kernel_name=python
+        shell: bash
