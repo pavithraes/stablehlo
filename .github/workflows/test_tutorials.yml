@@ -28,5 +28,5 @@ jobs:
 
       - name: Execute tutorial notebooks
         run: |
-          jupyter execute docs/tutorials/*.ipynb
+          jupyter execute docs/tutorials/*.ipynb --kernel python
         shell: bash
