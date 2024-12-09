@@ -5,6 +5,7 @@ transformers
 torch-xla==2.5.0
 torch==2.5.0
 torchvision==0.20.0
+stablehlo --find-links https://github.com/openxla/stablehlo/releases/expanded_assets/dev-wheels
 tensorflow-cpu
 ipython
 ipykernel
